@@ -6,7 +6,7 @@ let nextId = JSON.parse(localStorage.getItem("nextId"));
 function generateTaskId() {
     const nextId= 
 
-}
+}   
 
 // Todo: create a function to create a task card
 function createTaskCard(task) {
