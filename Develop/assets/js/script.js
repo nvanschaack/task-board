@@ -4,6 +4,7 @@ let nextId = JSON.parse(localStorage.getItem("nextId"));
 
 // Todo: create a function to generate a unique task id
 function generateTaskId() {
+    const nextId= 
 
 }
 
@@ -14,7 +15,9 @@ function createTaskCard(task) {
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
-
+    // $( function() {
+    //     $( "#draggable" ).draggable();
+    //   } );
 }
 
 // Todo: create a function to handle adding a new task
