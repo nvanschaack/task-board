@@ -58,5 +58,5 @@ function taskEl () {
 const submit= document.getElementById('submit');
 submit.addEventListener('click', taskEl);
 
-////instead of console logging, i want the task variable to become a card
+////instead of console logging the task variable, i want the task variable to become a card
 //bootstrap classes to create a card, use extend boostrap activity 05.18 --> created divs and applied bootstrap classes to those divs 
