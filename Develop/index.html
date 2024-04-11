@@ -22,24 +22,31 @@
   </header>
   <div class="container">
     <div class="text-center mb-5">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
 
-    <!-- Todo: Create a modal with a form to add tasks -->
-    <form>
-      <div>
-        <label for="task title">Task Title</label>
-        <input type="text" />
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Task</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div>
-        <label for="task due date" id="date">Task Due Date</label>
-        <input />
+      <div class="modal-body">
+        <input type="text" placeholder="enter name"/>
+        <input type="text" placeholder="enter description"/>
+        <input type="date" placeholder="enter due date"/>
       </div>
-      <div>
-        <label for="task description">Task Description</label>
-        <input type="text" />
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
-    </form>
+    </div>
+  </div>
+</div>
 
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
