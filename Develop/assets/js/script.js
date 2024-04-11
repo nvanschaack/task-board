@@ -38,3 +38,25 @@ function handleDrop(event, ui) {
 $(document).ready(function () {
 
 });
+
+//to console log the input fields in the modal:
+//make variable for name, description and due date
+//make a function named taskEl
+function taskEl () {
+    const enterName= document.getElementById('name');
+    const enterDesc= document.getElementById('description');
+    const enterDueDate= document.getElementById('due-date');
+
+    const task = {
+        enterName: enterName.value,
+        enterDesc: enterDesc.value,
+        enterDueDate: enterDueDate.value,
+    }
+    console.log(task);
+
+}
+const submit= document.getElementById('submit');
+submit.addEventListener('click', taskEl);
+
+////instead of console logging, i want the task variable to become a card
+//bootstrap classes to create a card, use extend boostrap activity 05.18 --> created divs and applied bootstrap classes to those divs 
