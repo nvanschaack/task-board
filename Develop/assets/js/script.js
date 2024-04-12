@@ -25,7 +25,6 @@ const cardInHtml= $('#todo-cards')
 
 // append the card text to the card body
 // append the card body to the card
-
 cardBody.append(cardText)
 cardBody.append(h5)
 card.append(cardBody)
@@ -55,6 +54,13 @@ function renderTaskList() {
 renderTaskList()
 //i just want my cards to go to the to do section though, so do i really need lines 44-51?
 
+//make cards draggable:
+{/* <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script> */}
+
 // Todo: create a function to handle adding a new task
 function handleAddTask(event) {
     const enterName = $('#name');
@@ -77,12 +83,15 @@ function handleAddTask(event) {
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
-
+//if task is posted as a card, i want the ability to delete the task 
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
 
+    // $( ".selector" ).droppable({
+    //     accept: ".special"
+    //   });
 }
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
