@@ -21,12 +21,15 @@ const card = $('<div>').addClass('card')
 const cardBody = $('<div>').addClass('card-body')
 const h5= $('<h5>').addClass('card-title').text(task.enterName)
 const cardText= $('<p>').addClass('card-text')
+const cardInHtml= $('#todo-cards')
 
 // append the card text to the card body
 // append the card body to the card
-cardText.append(cardBody)
-h5.append(cardBody)
-cardBody.append(card)
+
+cardBody.append(cardText)
+cardBody.append(h5)
+card.append(cardBody)
+cardInHtml.append(card)
 
 return card
 }
@@ -50,6 +53,7 @@ function renderTaskList() {
     }
 }
 renderTaskList()
+//i just want my cards to go to the to do section though, so do i really need lines 44-51?
 
 // Todo: create a function to handle adding a new task
 function handleAddTask(event) {
@@ -62,7 +66,7 @@ function handleAddTask(event) {
         enterName: enterName.value,
         enterDesc: enterDesc.value,
         enterDueDate: enterDueDate.value,
-        taskStatus: renderTaskList()
+        taskStatus: 'todo-cards'
     }
     console.log(task);
 
