@@ -22,11 +22,12 @@ function createTaskCard(task) {
     const h5 = $('<h5>').addClass('card-title').text(task.enterName)
     const cardText = $('<p>').addClass('card-text').text(task.enterDesc)
 
+    const deleteBtn = $('<button>').text('delete').on('click', handleDeleteTask)
 
     // append the card text to the card body
     // append the card body to the card
 
-    cardBody.append(h5, cardText)
+    cardBody.append(h5, cardText, deleteBtn)
     card.append(cardBody)
 
 
@@ -101,6 +102,23 @@ function handleAddTask(event) {
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
     //if task is posted as a card, i want the ability to delete the task 
+    // filter out the object with the cardID from the tasklist array. then resave the array in localStorage
+    event.preventDefault()
+    const cardId = parseInt($(this).parent().parent().attr('data-task-id'));
+
+    const newArray = []
+
+    for (let i = 0; i < taskList.length; i++) {
+        if (taskList[i].id !== cardId) {
+            newArray.push(taskList[i])
+        }
+    }
+    // taskList =  taskList.filter((task)=> task.id !== cardId )
+
+
+    localStorage.setItem('tasks', JSON.stringify(newArray))
+    window.location.reload()
+
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
@@ -112,8 +130,8 @@ function handleDrop(event, ui) {
     console.log(status);
     // get the id of each task in local storage
     for (const task of taskList) {
-        if (task.id === parseInt(taskId)){
-            task.taskStatus =  status
+        if (task.id === parseInt(taskId)) {
+            task.taskStatus = status
         }
     }
 
