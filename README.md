@@ -2,7 +2,7 @@
 ![Preview of Task Board](./assets/images/taskboard.png) 
 
 ## Description
-This [application] (https://nvanschaack.github.io/task-board/) is a great tool for someone who is looking to organize their to-do lists. All in one page, the user is able to add any number of tasks they need to get done, are working on, or have completed!
+This [application](https://nvanschaack.github.io/task-board/) is a great tool for someone who is looking to organize their to-do lists. All in one page, the user is able to add any number of tasks they need to get done, are working on, or have completed!
 
 ## Technologies
 - HTML5
