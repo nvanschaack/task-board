@@ -21,15 +21,15 @@ function createTaskCard(task) {
     const cardBody = $('<div>').addClass('card-body')
     const h5 = $('<h5>').addClass('card-title').text(task.enterName)
     const cardText = $('<p>').addClass('card-text').text(task.enterDesc)
+    const cardDueDate= $('<p>').addClass('card-due-date').text(task.enterDueDate)
+
 
     const deleteBtn = $('<button>').text('delete').on('click', handleDeleteTask)
 
     // append the card text to the card body
     // append the card body to the card
-
-    cardBody.append(h5, cardText, deleteBtn)
+    cardBody.append(h5, cardText, cardDueDate, deleteBtn)
     card.append(cardBody)
-
 
     return card
 }
@@ -44,7 +44,7 @@ function renderTaskList() {
     const done = $('#done-cards')
     done.empty()
 
-    //   will need: create a for loop that loops over the length of the taskList. 
+    //   create a for loop that loops over the length of the taskList. 
     for (let i = 0; i < taskList.length; i++) {
         if (taskList[i].taskStatus === 'to-do') {
             // append in to-do section
@@ -75,8 +75,6 @@ function renderTaskList() {
     });
 
 }
-
-
 
 // Todo: create a function to handle adding a new task
 function handleAddTask(event) {
@@ -154,5 +152,3 @@ $(document).ready(function () {
         }
     )
 });
-
-
